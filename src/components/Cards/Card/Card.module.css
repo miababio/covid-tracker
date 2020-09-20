@@ -1,0 +1,9 @@
+.card {
+    margin: 0 2% !important; /* Because we're using material UI, we need to add this */
+}
+
+@media (max-width: 770px) {
+    .card {
+        margin: 2% 0 !important;
+    }
+}

@@ -5,7 +5,7 @@ import styles from './Chart.module.css';
 
 const Chart: React.FC<{data: any, country: any}> = ({ data: { confirmed, recovered, deaths }, country }) => {
     const [dailyData, setDailyData] = useState([]); // Initializes state to empty object, for global data
-    // <{[index: number]: any}>
+    // <{[index: number]: any}> <<- If you needed to specify that an array was using an umber as an index
     /**
      * The above code is the same as doing:
      *  state = {
@@ -23,7 +23,7 @@ const Chart: React.FC<{data: any, country: any}> = ({ data: { confirmed, recover
     }, []); // This makes the useEffect act like componentDidMount, so it only runs once, instead of endlessly
 
     const LineChart = (
-        dailyData.length ? (
+        dailyData?.length ? (
             <Line data={{
                 labels: dailyData.map(({ date }) => date),
                 datasets: [{
@@ -39,7 +39,7 @@ const Chart: React.FC<{data: any, country: any}> = ({ data: { confirmed, recover
                     fill: true
                 }]
             }} />
-        ) : null
+        ) : <p>Loading Global Chart...</p>
     );
 
     const BarChart = (

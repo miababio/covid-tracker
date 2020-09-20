@@ -1,3 +1,5 @@
+This project was created following a [YouTube tutorial](https://www.youtube.com/watch?v=khJlrj3Y6Ls) from the channel Javascript Mastery. I further enhanced the project by converting it to Typescript, and adding interfaces to help definite better type definitions for the incoming and outgoing data.<br/><br/><br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
